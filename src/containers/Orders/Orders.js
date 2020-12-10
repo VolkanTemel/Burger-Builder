@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 import Order from '../../components/Order/Order';
 import axios from '../../axios-orders';
@@ -9,6 +9,7 @@ class Orders extends Component {
         orders: [],
         loading: true
     }
+
     componentDidMount() {
         axios.get('/orders.json')
             .then(res => {
@@ -33,10 +34,10 @@ class Orders extends Component {
                     <Order
                         key={ order.id }
                         ingredients={ order.ingredients }
-                        price={ +order.price } />
+                        price={ order.price } />
                 )) }
             </div>
-        )
+        );
     }
 }
 
