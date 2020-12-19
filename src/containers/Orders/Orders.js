@@ -8,7 +8,6 @@ import * as actions from '../../store/actions/index';
 import Spinner from '../../components/UI/Spinner/Spinner';
 
 class Orders extends Component {
-
     componentDidMount() {
         this.props.onFetchOrders();
     }
@@ -22,8 +21,7 @@ class Orders extends Component {
                     ingredients={ order.ingredients }
                     price={ order.price } />
             ))
-        };
-
+        }
         return (
             <div>
                 {orders }
@@ -41,7 +39,7 @@ const mapStateToProps = state => {
 
 const mapDispatchToProps = dispatch => {
     return {
-        onFetchOrders: () => dispatch(actions.  ())
+        onFetchOrders: () => dispatch(actions.fetchOrders())
     };
 };
 
